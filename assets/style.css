@@ -1,0 +1,77 @@
+/* assets/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --background-color: #0e1117;
+    --primary-text-color: #fafafa;
+    --secondary-text-color: #a9a9a9;
+    --container-bg-color: #1e1e1e;
+    --container-border-color: #3c3f4a;
+    --accent-color: #ff4b4b; /* Vermelho suave do Streamlit */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 { font-weight: 600; text-align: center; }
+hr { border-color: var(--container-border-color); margin: 40px 0; }
+
+/* --- Layout Principal e Cabeçalho --- */
+.main-content { padding: 20px 5%; }
+.sticky-header {
+    position: sticky; top: 0; left: 0; width: 100%;
+    background-color: rgba(14, 17, 23, 0.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    z-index: 1000; padding: 15px 0;
+    border-bottom: 1px solid var(--container-border-color);
+}
+
+/* --- Estilo dos Componentes --- */
+.custom-container {
+    background-color: var(--container-bg-color);
+    border: 1px solid var(--container-border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.custom-button {
+    background-color: var(--accent-color);
+    color: white; border: none; border-radius: 5px; padding: 10px 20px;
+    font-size: 16px; font-weight: 600; cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.custom-button:hover { filter: brightness(1.2); }
+
+/* --- Estilo dos Sliders para replicar o Streamlit --- */
+.rc-slider-rail { background-color: #fff; height: 4px; border-radius: 2px; }
+.rc-slider-track { background-color: var(--accent-color); height: 4px; }
+.rc-slider-handle {
+    border: 2px solid var(--accent-color);
+    background-color: var(--accent-color);
+    opacity: 1; width: 18px; height: 18px; margin-top: -7px;
+}
+.rc-slider-dot { display: none !important; }
+
+/* --- Estilo para Dropdown e DatePicker (Correção de Cor) --- */
+.Select-control, .DateInput_input, .Select-value-label, .Select-placeholder {
+    color: #333 !important;
+}
+
+/* --- Tabelas --- */
+.dash-table-container { border-radius: 8px; overflow: hidden; }
+.dash-header { background-color: #3e424c; font-weight: bold; }
+.dash-cell {
+    background-color: var(--container-bg-color);
+    border-bottom: 1px solid var(--container-border-color);
+    padding: 10px;
+    text-align: left;
+}
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+    width: 100% !important;
+}

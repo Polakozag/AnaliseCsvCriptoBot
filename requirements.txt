@@ -1,4 +1,4 @@
-streamlit
+streamlit 
 pandas
 numpy
 plotly
@@ -6,3 +6,5 @@ requests
 pycoingecko
 toml
 matplotlib
+dash
+gunicorn
