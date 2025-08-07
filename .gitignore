@@ -1,0 +1,27 @@
+# Arquivos de Segredos e Chaves de API
+.streamlit/
+.streamlit/secrets.toml
+secrets.toml
+
+# Dados Pessoais e arquivos CSV
+*.csv
+
+# Ambiente Virtual do Python
+venv/
+.venv/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de configuração de IDEs (opcional, mas boa prática)
+.vscode/
+.idea/
+
+# Arquivos e pastas de arquivos locais
+bkp/
+ProximosPassos.txt
+prompt.md
+observações.txt
+validate.py
+inspect_api.py
